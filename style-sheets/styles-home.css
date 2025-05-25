@@ -1,0 +1,192 @@
+/* styles.css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Lora', serif;
+    line-height: 1.6;
+    background: #fff;
+    color: #000;
+    overflow-x: hidden;
+  }
+  
+
+  
+  /* Hero Section */
+  .hero {
+    background: url('images/eiffel.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 70px;
+  }
+  
+  .hero-text h1 {
+    font-size: 10rem;
+    color: white;
+  }
+  
+  .hero-text h3 {
+    font-size: 3rem;
+    color: white;
+    margin-top: 10px;
+  }
+  
+  /* Banners */
+  .banner {
+    width: 100vw;
+    height: 25vh;
+    background-size: cover;
+    background-position: center;
+    display: block;
+    justify-items: center;
+  }
+  
+  .uk { background-image: url('images/banners/uk.jpg'); }
+  .france { background-image: url('images/banners/france.jpg'); }
+  .germany { background-image: url('images/banners/germany.jpg'); }
+  .italy { background-image: url('images/banners/italy.jpg'); }
+  .vatican { background-image: url('images/banners/vatican.jpg'); }
+  .spain { background-image: url('images/banners/spain.jpg'); }
+  .packages { background-image: url('images/banners/packages.jpg'); }
+  
+  /* Contact */
+  .contact-section {
+    padding: 60px 20px;
+    text-align: center;
+    background: #fff;
+    color: #000;
+  }
+  
+
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    background: #000;
+    color: white;
+    padding: 20px;
+    font-family: 'Lora', serif;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .hero-text h1 { font-size: 2.5rem; }
+    #nav-toggle { display: block; }
+    .nav-links {
+      flex-direction: column;
+      background-color: #000;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      display: none;
+      width: 100%;
+    }
+    .nav-links.show {
+      display: flex !important;
+    }
+  }
+  
+  /* Trip Intro Section */
+.trip-intro {
+    padding: 60px 20px;
+    text-align: center;
+    background: #fff;
+    color: #000;
+  }
+  
+  .trip-intro h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .trip-intro p {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    font-size: 1.1rem;
+  }
+  
+  .trip-intro .quote {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    font-style: italic;
+    margin: 30px auto;
+    text-align: center;
+    max-width: 1000px;
+  }
+  
+  .banner:hover {
+    filter: brightness(50%);
+    transition: filter 0.3s ease-in-out;
+  }
+
+  .contact-section h2 {
+    font-size: 4rem; /* Previously ~1rem, now 2.5x bigger */
+    margin-bottom: 10px;
+    max-width: 50v;
+  }
+  
+  .contact-img {
+    width: 50vw; /* 300px × 2.5 */
+    height: 20vh; /* 60px × 2.5 */
+    font-size: 8rem; /* 2rem × 2.5 */
+    border-radius: 30px;
+    background: url('images/contact.jpg') center/cover no-repeat;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    transition: filter 0.3s ease-in-out;
+    overflow-y: hidden;
+  }
+  
+  .contact-img:hover {
+    filter: brightness(50%);
+  }
+
+
+  @media (max-width: 600px) {
+    .contact-img {
+      width: 80vw;
+      height: 15vh;
+      font-size: 2.5rem;
+      padding: 0 10px;
+      word-wrap: break-word;
+      text-align: center;
+        }
+      }
+
+      .banner {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      
+      .banner-text {
+        color: white;
+        font-size: 5rem;
+        font-weight: bold;
+        text-decoration: none;
+        font-family: 'Lora', serif;
+        line-height: 0.9;
+        overflow-y: hidden;
+      }
+      
+      .banner a {
+        text-decoration: none;
+      }
+      a {
+        text-decoration: none;
+        display: block;
+      }
+    

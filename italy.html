@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Italy - Terrific Travels</title>
+        <link rel="icon" href="style-sheets/images/logo-black.png" type="image/png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style-sheets/styles-home.css">
+        <link rel="stylesheet" href="style-sheets/styles-italy.css">
+        <link rel="stylesheet" href="style-sheets/scroller-styles.css">
+        <link rel="stylesheet" href="style-sheets/popup.css" />
+        <link rel="stylesheet" href="style-sheets/navbar.css" />
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+          (function() {
+            emailjs.init('EH0KToJ6LwhmwxSX4'); // Replace with your EmailJS public key
+          })();
+      </script>
+      </head>   
+    <body>
+
+        <!-- Navigation -->
+<header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="style-sheets/images/logo.png" alt="Terrific Travels">
+      </a>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="about_us.html">About Us</a></li>
+        <li class="dropdown">
+          <a href="#">Locations ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="uk.html">United Kingdom</a></li>
+            <li><a href="france.html">France</a></li>
+            <li><a href="germany.html">Germany</a></li>
+            <li><a href="italy.html">Italy</a></li>
+            <li><a href="vatican.html">Vatican City</a></li>
+            <li><a href="spain.html">Spain</a></li>
+          </ul>
+        </li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a a href="#" onclick="document.getElementById('popupOverlay').style.display='flex'; return false;">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="nav-toggle">☰</button>
+  </header>
+  
+<!-- Hero Section -->
+<section class="hero-italy">
+    <div class="hero-text">
+      <h1>Italy</h1>
+    </div>
+  </section>
+  
+  <!-- italy Overview -->
+  <section class="section">
+    <h2>Italy, the beautiful boot of Europe</h2>
+    <p>
+        Italy is a dream destination that captivates travelers with its rich history, stunning landscapes, and world-famous cuisine. From the romantic canals of Venice and the ancient ruins of Rome to the rolling hills of Tuscany and the stunning Amalfi Coast, Italy offers a perfect mix of culture, beauty, and adventure. Visitors can explore iconic landmarks like the Colosseum, the Leaning Tower of Pisa, and the Vatican, or relax with a glass of wine in a charming piazza. Whether you’re a history buff, a foodie, an art lover, or simply looking to unwind, Italy promises unforgettable experiences and timeless charm at every turn.
+    </p>
+  </section>
+  
+  <!-- Paris Section -->
+  <section class="section">
+    <h2>Rome</h2>
+    <p>
+        Rome, the Eternal City, is a captivating destination where ancient history and vibrant modern life come together. Visitors can walk in the footsteps of emperors at the iconic Colosseum, marvel at the grandeur of the Roman Forum, and toss a coin into the stunning Trevi Fountain to ensure their return. The Vatican City, home to St. Peter’s Basilica and the awe-inspiring Sistine Chapel, showcases the city’s deep religious and artistic heritage. Don’t miss the majestic Pantheon or the lively atmosphere of Piazza Navona, filled with street artists, fountains, and cafés. With its rich blend of history, architecture, and Italian charm, Rome offers an unforgettable experience.
+    </p>
+  </section>
+  
+  <!-- Strasbourg Section -->
+  <section class="section">
+    <h2>Venice</h2>
+    <p>
+        Venice is one of the world’s most enchanting cities, known for its romantic canals, historic architecture, and timeless beauty. Built on a network of islands connected by bridges and waterways, Venice offers a truly unique experience. A gondola ride along the Grand Canal provides stunning views of elegant palaces and centuries-old buildings. At the heart of the city lies the magnificent St. Mark’s Square, home to the striking St. Mark’s Basilica and the iconic Campanile. Nearby, the ornate Doge’s Palace reflects the city’s rich political history, while the famous Rialto Bridge offers spectacular views and vibrant shopping. With its magical atmosphere and cultural treasures, Venice is a must-visit destination.
+    </p>
+  </section>
+  
+  <!-- Lyon Section -->
+  <section class="section">
+    <h2>Naples</h2>
+    <p>
+        Naples, a vibrant city in southern Italy, is rich in history, culture, and flavor. Nestled along the stunning Bay of Naples, it offers visitors a gateway to some of Italy’s most iconic sights. Explore the historic city center, a UNESCO World Heritage Site, filled with narrow streets, grand churches, and bustling piazzas. Visit the impressive Naples Cathedral and the National Archaeological Museum, home to one of the world’s finest collections of Roman artifacts. Just outside the city, you can discover the awe-inspiring ruins of Pompeii and Herculaneum, preserved by the eruption of Mount Vesuvius. Don’t miss a walk along the scenic seafront promenade or the chance to sample authentic Neapolitan pizza in the city where it was born.
+    </p>
+  </section>
+
+  <!-- Image Scroller Section -->
+  <div class="carousel">
+    <div class="carousel-images">
+      <img src="style-sheets/images\image_scrollers\italy\italy1.jpg" class="active">
+      <img src="style-sheets/images\image_scrollers\italy\italy2.jpg">
+      <img src="style-sheets/images\image_scrollers\italy\italy3.jpg">
+      <img src="style-sheets/images\image_scrollers\italy\italy4.jpg">
+      <img src="style-sheets/images\image_scrollers\italy\italy5.jpg">
+      <img src="style-sheets/images\image_scrollers\italy\italy6.jpg">
+      <img src="style-sheets/images\image_scrollers\italy\italy7.jpg">
+    </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+    <div class="dots"></div>
+  </div>
+  
+  <script src="scroller.js"></script>
+  
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h2>Contact Us to Book</h2>
+    <h2>Your Next Adventure</h2>
+    <a onclick="document.getElementById('popupOverlay').style.display='flex'" class="contact-button">
+      <div class="contact-img">Contact</div>
+    </a>
+  </section>
+  
+  <!-- Footer (unchanged) -->
+  <footer class="footer">
+    <p>Email: contact@terrifictravels.com.au</p>
+    <p>Phone: +61 123 456 789</p>
+    <p>Address: 68 Cecil St, South Melbourne VIC 3205</p>
+    <p>ABN: 95 656 928 483</p>
+    <p>&copy; Terrific Travels</p>
+  </footer>
+  
+  <script>
+    document.getElementById('nav-toggle').onclick = function () {
+        document.querySelector('.nav-links').classList.toggle('show');
+    };
+
+  </script>
+
+
+<div id="popupOverlay" class="ttt-overlay">
+  <div class="ttt-popup">
+    <span class="ttt-close" onclick="closePopup()">&times;</span>
+    <h1 class="ttt-title">Get in Touch</h1>
+    <form id="contactForm" class="ttt-form">
+      <input type="text" name="full_name" placeholder="Full Name" required>
+      <input type="tel" name="phone_number" placeholder="Phone Number" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      <p id="error-msg" class="ttt-error" style="display: none;">Please fill in all fields.</p>
+      <button type="submit" class="ttt-submit-btn">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- Thank You Popup -->
+<div id="thankYouPopup" class="ttt-overlay" style="display: none;">
+  <div class="ttt-popup">
+    <span class="ttt-close" onclick="closeThankYou()">&times;</span>
+    <h1 class="ttt-title">Thank You!</h1>
+    <p class="ttt-text">Your message has been received. We'll get back to you soon.</p>
+  </div>
+</div>
+
+<!-- Navigation Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector('.nav-links').classList.remove('show');
+    document.getElementById('nav-toggle').onclick = function () {
+      document.querySelector('.nav-links').classList.toggle('show');
+    };
+  });
+</script>
+
+<!-- Supabase SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- Contact Form Script -->
+<script>
+  // Initialize Supabase
+  const supabase = window.supabase.createClient(
+    'https://shrhxmfqbuggbyfoqixw.supabase.co',
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNocmh4bWZxYnVnZ2J5Zm9xaXh3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgwOTMxNjUsImV4cCI6MjA2MzY2OTE2NX0.zXXIdTTtMXCYc6p3KVko-T9tmM-a9aHGFoDNMLpL6GA'
+  );
+
+
+  // Handle form submission
+  document.getElementById('contactForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const fullName = form.full_name.value.trim();
+    const phone = form.phone_number.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
+
+    if (!fullName || !phone || !email || !message) {
+      document.getElementById('error-msg').style.display = 'block';
+      return;
+    }
+
+    try {
+      // Insert into Supabase
+      const { error } = await supabase
+        .from('contacts')
+        .insert([{ full_name: fullName, phone_number: phone, email, message }]);
+
+      if (error) {
+        console.error('Supabase insert error:', error);
+        alert('Failed to submit form: ' + error.message);
+        return;
+      }
+
+      // Send confirmation email via EmailJS
+      await emailjs.send('service_on5a8ge', 'template_zz8iznt', {
+        full_name: fullName,
+        phone_number: phone,
+        email: email,
+        message: message
+      });
+
+      // Show thank-you popup
+      document.getElementById('popupOverlay').style.display = 'none';
+      document.getElementById('thankYouPopup').style.display = 'flex';
+      form.reset();
+
+    } catch (err) {
+      console.error('Submission error:', err);
+      alert('Something went wrong. Please try again.');
+    }
+  });
+
+  function closePopup() {
+    document.getElementById('popupOverlay').style.display = 'none';
+  }
+
+  function closeThankYou() {
+    document.getElementById('thankYouPopup').style.display = 'none';
+  }
+</script>
+</body>
+</html>

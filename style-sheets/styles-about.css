@@ -1,0 +1,53 @@
+/* About Page Specific Styles */
+.about-hero {
+    background: url('images/about-hero.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+    text-align: center;
+  }
+  
+  .about-hero .hero-text h1 {
+    font-size: 6rem;
+    color: white;
+  }
+  
+  .about-section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    background: #fff;
+  }
+  
+  .about-section h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-section p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  .reviews-section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .reviews-section h2 {
+    font-size: 4rem;
+    margin-bottom: 30px;
+  }
+  
+  .review {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+
+  

@@ -1,0 +1,90 @@
+ 
+  .carousel {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 900px;
+    aspect-ratio: 2 / 1;
+    overflow: hidden;
+    border-radius: 100px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .carousel-images {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel-images img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .carousel-images img.active {
+    opacity: 1;
+  }
+  
+  button.prev,
+  button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0 15px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+  }
+  
+  button.prev { left: 10px; }
+  button.next { right: 10px; }
+  
+  .dots {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .dots .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 6px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .dots .dot.active {
+    background-color: white;
+  }
+  
+  @media (max-width: 600px) {
+    button.prev,
+    button.next {
+      font-size: 1.5rem;
+      padding: 0 10px;
+    }
+  
+    .dots .dot {
+      width: 8px;
+      height: 8px;
+      margin: 0 4px;
+    }
+  }
+  

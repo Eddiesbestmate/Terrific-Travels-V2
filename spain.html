@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Spain - Terrific Travels</title>
+        <link rel="icon" href="style-sheets/images/logo-black.png" type="image/png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style-sheets/styles-home.css">
+        <link rel="stylesheet" href="style-sheets/styles-spain.css">
+        <link rel="stylesheet" href="style-sheets/scroller-styles.css">
+        <link rel="stylesheet" href="style-sheets/popup.css" />
+        <link rel="stylesheet" href="style-sheets/navbar.css" />
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+          (function() {
+            emailjs.init('EH0KToJ6LwhmwxSX4'); // Replace with your EmailJS public key
+          })();
+      </script>
+      </head>   
+    <body>
+
+        <!-- Navigation -->
+<header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="style-sheets/images/logo.png" alt="Terrific Travels">
+      </a>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="about_us.html">About Us</a></li>
+        <li class="dropdown">
+          <a href="#">Locations ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="uk.html">United Kingdom</a></li>
+            <li><a href="france.html">France</a></li>
+            <li><a href="germany.html">Germany</a></li>
+            <li><a href="italy.html">Italy</a></li>
+            <li><a href="vatican.html">Vatican City</a></li>
+            <li><a href="spain.html">Spain</a></li>
+          </ul>
+        </li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a a href="#" onclick="document.getElementById('popupOverlay').style.display='flex'; return false;">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="nav-toggle">☰</button>
+  </header>
+  
+<!-- Hero Section -->
+<section class="hero-spain">
+    <div class="hero-text">
+      <h1>Spain</h1>
+    </div>
+  </section>
+  
+  <!-- spain Overview -->
+  <section class="section">
+    <h2>Spain, the culture capital of the world</h2>
+    <p>
+        Spain is a vibrant and diverse destination that offers something for every traveler. From the sun-soaked beaches of the Costa del Sol to the rich history and stunning architecture of cities like Barcelona and Madrid, Spain combines relaxation with culture and excitement. Food lovers can indulge in world-famous tapas, paella, and delicious local wines, while music and dance enthusiasts will be enchanted by flamenco performances and lively festivals. Whether you’re exploring the Alhambra’s Moorish splendor in Granada, wandering the charming streets of Seville, or enjoying the bustling energy of a Spanish market, Spain promises unforgettable experiences, warm hospitality, and a true taste of Mediterranean life.
+    </p>
+  </section>
+  
+  <!-- Paris Section -->
+  <section class="section">
+    <h2>Madrid</h2>
+    <p>
+        Madrid, Spain’s lively capital, is a city bursting with culture, history, and vibrant energy. Visitors can explore the grandeur of the Royal Palace, the official residence of the Spanish monarchy, and stroll through the nearby Plaza Mayor, a bustling square filled with cafes and street performers. Art lovers will be captivated by the world-renowned Prado Museum, home to masterpieces by Velázquez, Goya, and El Greco, while the Reina Sofía Museum showcases modern works, including Picasso’s famous Guernica. The beautiful Retiro Park offers a peaceful retreat in the heart of the city, complete with gardens, a lake, and iconic monuments. With its lively tapas bars, bustling markets, and rich cultural scene, Madrid is an unforgettable destination full of life and history.
+    </p>
+  </section>
+  
+  <!-- Strasbourg Section -->
+  <section class="section">
+    <h2>Valencia</h2>
+    <p>
+        Valencia, a vibrant city on Spain’s southeastern coast, beautifully blends historic charm with modern innovation. Visitors can explore the stunning City of Arts and Sciences, a futuristic complex featuring an interactive science museum, an opera house, and Europe’s largest aquarium, the Oceanogràfic. The city’s historic center is home to the impressive Valencia Cathedral, where the legendary Holy Grail is said to be housed, and the bustling Plaza de la Virgen, surrounded by beautiful medieval buildings. Don’t miss the lively Central Market, one of Europe’s largest fresh food markets, perfect for sampling local delicacies. With its sandy beaches, delicious paella, and lively festivals like Las Fallas, Valencia offers a unique and unforgettable Spanish experience.
+    </p>
+  </section>
+  
+  <!-- Lyon Section -->
+  <section class="section">
+    <h2>Barcelona</h2>
+    <p>
+        Barcelona, a vibrant city on Spain’s northeastern coast, is famous for its unique blend of Gothic history and modernist architecture. At the heart of the city lies the stunning Sagrada Família, Antoni Gaudí’s unfinished masterpiece that draws visitors from around the world with its intricate design and soaring spires. The bustling La Rambla boulevard offers lively street performers, shops, and cafés, while the charming Gothic Quarter invites visitors to wander its narrow medieval streets. Park Güell, another Gaudí creation, showcases colorful mosaics and panoramic views of the city. With beautiful beaches, world-class art museums like the Picasso Museum, and a vibrant culinary scene, Barcelona is a captivating destination full of culture, creativity, and energy.
+    </p>
+  </section>
+
+  <!-- Image Scroller Section -->
+  <div class="carousel">
+    <div class="carousel-images">
+      <img src="style-sheets/images\image_scrollers\Spain\spain1.jpg" class="active">
+      <img src="style-sheets/images\image_scrollers\Spain\spain2.jpg">
+      <img src="style-sheets/images\image_scrollers\Spain\spain3.jpg">
+      <img src="style-sheets/images\image_scrollers\Spain\spain4.jpg">
+      <img src="style-sheets/images\image_scrollers\Spain\spain5.jpg">
+      <img src="style-sheets/images\image_scrollers\spain\spain6.jpg">
+      <img src="style-sheets/images\image_scrollers\spain\spain7.jpg">
+    </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+    <div class="dots"></div>
+  </div>
+  
+  <script src="scroller.js"></script>
+  
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h2>Contact Us to Book</h2>
+    <h2>Your Next Adventure</h2>
+    <a onclick="document.getElementById('popupOverlay').style.display='flex'" class="contact-button">
+      <div class="contact-img">Contact</div>
+    </a>
+  </section>
+  
+  <!-- Footer (unchanged) -->
+  <footer class="footer">
+    <p>Email: contact@terrifictravels.com.au</p>
+    <p>Phone: +61 123 456 789</p>
+    <p>Address: 68 Cecil St, South Melbourne VIC 3205</p>
+    <p>ABN: 95 656 928 483</p>
+    <p>&copy; Terrific Travels</p>
+  </footer>
+  
+  <script>
+    document.getElementById('nav-toggle').onclick = function () {
+        document.querySelector('.nav-links').classList.toggle('show');
+    };
+
+  </script>
+
+
+<div id="popupOverlay" class="ttt-overlay">
+  <div class="ttt-popup">
+    <span class="ttt-close" onclick="closePopup()">&times;</span>
+    <h1 class="ttt-title">Get in Touch</h1>
+    <form id="contactForm" class="ttt-form">
+      <input type="text" name="full_name" placeholder="Full Name" required>
+      <input type="tel" name="phone_number" placeholder="Phone Number" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      <p id="error-msg" class="ttt-error" style="display: none;">Please fill in all fields.</p>
+      <button type="submit" class="ttt-submit-btn">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- Thank You Popup -->
+<div id="thankYouPopup" class="ttt-overlay" style="display: none;">
+  <div class="ttt-popup">
+    <span class="ttt-close" onclick="closeThankYou()">&times;</span>
+    <h1 class="ttt-title">Thank You!</h1>
+    <p class="ttt-text">Your message has been received. We'll get back to you soon.</p>
+  </div>
+</div>
+
+<!-- Navigation Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector('.nav-links').classList.remove('show');
+    document.getElementById('nav-toggle').onclick = function () {
+      document.querySelector('.nav-links').classList.toggle('show');
+    };
+  });
+</script>
+
+<!-- Supabase SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- Contact Form Script -->
+<script>
+  // Initialize Supabase
+  const supabase = window.supabase.createClient(
+    'https://shrhxmfqbuggbyfoqixw.supabase.co',
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNocmh4bWZxYnVnZ2J5Zm9xaXh3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgwOTMxNjUsImV4cCI6MjA2MzY2OTE2NX0.zXXIdTTtMXCYc6p3KVko-T9tmM-a9aHGFoDNMLpL6GA'
+  );
+
+
+  // Handle form submission
+  document.getElementById('contactForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const fullName = form.full_name.value.trim();
+    const phone = form.phone_number.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
+
+    if (!fullName || !phone || !email || !message) {
+      document.getElementById('error-msg').style.display = 'block';
+      return;
+    }
+
+    try {
+      // Insert into Supabase
+      const { error } = await supabase
+        .from('contacts')
+        .insert([{ full_name: fullName, phone_number: phone, email, message }]);
+
+      if (error) {
+        console.error('Supabase insert error:', error);
+        alert('Failed to submit form: ' + error.message);
+        return;
+      }
+
+      // Send confirmation email via EmailJS
+      await emailjs.send('service_on5a8ge', 'template_zz8iznt', {
+        full_name: fullName,
+        phone_number: phone,
+        email: email,
+        message: message
+      });
+
+      // Show thank-you popup
+      document.getElementById('popupOverlay').style.display = 'none';
+      document.getElementById('thankYouPopup').style.display = 'flex';
+      form.reset();
+
+    } catch (err) {
+      console.error('Submission error:', err);
+      alert('Something went wrong. Please try again.');
+    }
+  });
+
+  function closePopup() {
+    document.getElementById('popupOverlay').style.display = 'none';
+  }
+
+  function closeThankYou() {
+    document.getElementById('thankYouPopup').style.display = 'none';
+  }
+</script>
+</body>
+</html>

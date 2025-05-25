@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Lora&display=swap');
+
+.ttt-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  font-family: 'Lora', serif;
+}
+
+.ttt-popup {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  position: relative;
+  text-align: center;
+}
+
+.ttt-close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 24px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+}
+
+.ttt-title {
+  font-family: 'Lora', serif;
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+.ttt-form input,
+.ttt-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-family: 'Lora', serif;
+}
+
+.ttt-submit-btn {
+  background-color: #000;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.ttt-submit-btn:hover {
+  background-color: #444;
+}
+
+.ttt-error {
+  color: red;
+  display: none;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.ttt-text {
+  font-size: 1rem;
+  margin-top: 1rem;
+}

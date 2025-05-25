@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terrific Travels</title>
+  <link rel="icon" href="style-sheets/images/logo-black.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style-sheets/styles-home.css" />
+  <link rel="stylesheet" href="style-sheets/popup.css" />
+  <link rel="stylesheet" href="style-sheets/navbar.css" />
+  <link rel="stylesheet" href="style-sheets/navbar.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      emailjs.init('EH0KToJ6LwhmwxSX4'); // Replace with your EmailJS public key
+    })();
+</script>
+</head>
+<body>
+  <!-- Fixed Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="style-sheets/images/logo.png" alt="Terrific Travels">
+      </a>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="about_us.html">About Us</a></li>
+        <li class="dropdown">
+          <a href="#">Locations ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="uk.html">United Kingdom</a></li>
+            <li><a href="france.html">France</a></li>
+            <li><a href="germany.html">Germany</a></li>
+            <li><a href="italy.html">Italy</a></li>
+            <li><a href="vatican.html">Vatican City</a></li>
+            <li><a href="spain.html">Spain</a></li>
+          </ul>
+        </li>        
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="#" onclick="document.getElementById('popupOverlay').style.display='flex'; return false;">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="nav-toggle">☰</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Terrific Travels</h1>
+      <h3>Traveling since 1997</h3>
+    </div>
+  </section>
+
+  <!-- Trip Intro Section -->
+  <section class="trip-intro">
+    <h2>Creating Your Once in a Lifetime Trip</h2>
+    <p>
+      At Terrific Travels, we believe that travel should be more than just a getaway — it should be an unforgettable experience. Specializing exclusively in European destinations, we craft tailor-made journeys that immerse you in the culture, history, and hidden beauty of the continent.
+    </p>
+    <p class="quote">“The Trip was Amazing”</p>
+    <p>
+      Whether you're dreaming of a romantic escape to the Amalfi Coast, a culinary adventure through France, or a scenic rail journey across the Alps, our expert team designs each itinerary with care, insight, and a deep passion for Europe.
+    </p>
+    <p class="quote">“Nothing can beat that Week in France”</p>
+    <p>
+      Let us take the stress out of planning and transform your vision into a seamless, once-in-a-lifetime trip — one that’s uniquely yours.
+    </p>
+    <h2>Our Locations:</h2>
+  </section>
+
+  <!-- Full-Width Image Banners with Links -->
+  <a href="uk.html">
+    <section class="banner uk">
+      <h3 class="banner-text">United Kingdom</h3>
+    </section>
+  </a>
+  <a href="france.html">
+    <section class="banner france">
+      <h3 class="banner-text">France</h3>
+    </section>
+  </a>
+  <a href="germany.html">
+    <section class="banner germany">
+      <h3 class="banner-text">Germany</h3>
+    </section>
+  </a>
+  <a href="italy.html">
+    <section class="banner italy">
+      <h3 class="banner-text">Italy</h3>
+    </section>
+  </a>
+  <a href="vatican.html">
+    <section class="banner vatican">
+      <h3 class="banner-text">Vatican City</h3>
+    </section>
+  </a>
+  <a href="spain.html">
+    <section class="banner spain">
+      <h3 class="banner-text">Spain</h3>
+    </section>
+  </a>
+  <a href="packages.html">
+    <section class="banner packages">
+      <h3 class="banner-text">Packages</h3>
+    </section>
+  </a>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <h2>Contact Us to Book</h2>
+    <h2>Your Next Adventure</h2>
+    <a onclick="document.getElementById('popupOverlay').style.display='flex'" class="contact-button">
+      <div class="contact-img">Contact</div>
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Email: contact@terrifictravels.com.au</p>
+    <p>Phone: +61 123 456 789</p>
+    <p>Address: 68 Cecil St, South Melbourne VIC 3205</p>
+    <p>ABN: 95 656 928 483</p>
+    <p>&copy; Terrific Travels</p>
+  </footer>
+
+  <!-- Contact Popup -->
+  <div id="popupOverlay" class="ttt-overlay">
+    <div class="ttt-popup">
+      <span class="ttt-close" onclick="closePopup()">&times;</span>
+      <h1 class="ttt-title">Get in Touch</h1>
+      <form id="contactForm" class="ttt-form">
+        <input type="text" name="full_name" placeholder="Full Name" required>
+        <input type="tel" name="phone_number" placeholder="Phone Number" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <p id="error-msg" class="ttt-error" style="display: none;">Please fill in all fields.</p>
+        <button type="submit" class="ttt-submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Thank You Popup -->
+  <div id="thankYouPopup" class="ttt-overlay" style="display: none;">
+    <div class="ttt-popup">
+      <span class="ttt-close" onclick="closeThankYou()">&times;</span>
+      <h1 class="ttt-title">Thank You!</h1>
+      <p class="ttt-text">Your message has been received. We'll get back to you soon.</p>
+    </div>
+  </div>
+
+  <!-- Navigation Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelector('.nav-links').classList.remove('show');
+      document.getElementById('nav-toggle').onclick = function () {
+        document.querySelector('.nav-links').classList.toggle('show');
+      };
+    });
+  </script>
+
+  <!-- Supabase SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- Contact Form Script -->
+  <script>
+    // Initialize Supabase
+    const supabase = window.supabase.createClient(
+      'https://shrhxmfqbuggbyfoqixw.supabase.co',
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNocmh4bWZxYnVnZ2J5Zm9xaXh3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgwOTMxNjUsImV4cCI6MjA2MzY2OTE2NX0.zXXIdTTtMXCYc6p3KVko-T9tmM-a9aHGFoDNMLpL6GA'
+    );
+  
+  
+    // Handle form submission
+    document.getElementById('contactForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+  
+      const form = e.target;
+      const fullName = form.full_name.value.trim();
+      const phone = form.phone_number.value.trim();
+      const email = form.email.value.trim();
+      const message = form.message.value.trim();
+  
+      if (!fullName || !phone || !email || !message) {
+        document.getElementById('error-msg').style.display = 'block';
+        return;
+      }
+  
+      try {
+        // Insert into Supabase
+        const { error } = await supabase
+          .from('contacts')
+          .insert([{ full_name: fullName, phone_number: phone, email, message }]);
+  
+        if (error) {
+          console.error('Supabase insert error:', error);
+          alert('Failed to submit form: ' + error.message);
+          return;
+        }
+  
+        // Send confirmation email via EmailJS
+        await emailjs.send('service_on5a8ge', 'template_zz8iznt', {
+          full_name: fullName,
+          phone_number: phone,
+          email: email,
+          message: message
+        });
+  
+        // Show thank-you popup
+        document.getElementById('popupOverlay').style.display = 'none';
+        document.getElementById('thankYouPopup').style.display = 'flex';
+        form.reset();
+  
+      } catch (err) {
+        console.error('Submission error:', err);
+        alert('Something went wrong. Please try again.');
+      }
+    });
+  
+    function closePopup() {
+      document.getElementById('popupOverlay').style.display = 'none';
+    }
+  
+    function closeThankYou() {
+      document.getElementById('thankYouPopup').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

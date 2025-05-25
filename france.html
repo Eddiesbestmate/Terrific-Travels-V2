@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>France - Terrific Travels</title>
+        <link rel="icon" href="style-sheets/images/logo-black.png" type="image/png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style-sheets/styles-home.css">
+        <link rel="stylesheet" href="style-sheets/styles-france.css">
+        <link rel="stylesheet" href="style-sheets/scroller-styles.css">
+        <link rel="stylesheet" href="style-sheets/popup.css" />
+        <link rel="stylesheet" href="style-sheets/navbar.css" />
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+          (function() {
+            emailjs.init('EH0KToJ6LwhmwxSX4'); // Replace with your EmailJS public key
+          })();
+      </script>
+      </head>   
+    <body>
+
+        <!-- Navigation -->
+<header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="style-sheets/images/logo.png" alt="Terrific Travels">
+      </a>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="about_us.html">About Us</a></li>
+        <li class="dropdown">
+          <a href="#">Locations ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="uk.html">United Kingdom</a></li>
+            <li><a href="france.html">France</a></li>
+            <li><a href="germany.html">Germany</a></li>
+            <li><a href="italy.html">Italy</a></li>
+            <li><a href="vatican.html">Vatican City</a></li>
+            <li><a href="spain.html">Spain</a></li>
+          </ul>
+        </li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a a href="#" onclick="document.getElementById('popupOverlay').style.display='flex'; return false;">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="nav-toggle">☰</button>
+  </header>
+  
+<!-- Hero Section -->
+<section class="hero-france">
+    <div class="hero-text">
+      <h1>France</h1>
+    </div>
+  </section>
+  
+  <!-- France Overview -->
+  <section class="section">
+    <h2>France, the country of Love</h2>
+    <p>
+      France is a timeless destination that offers something for every traveler, making it a must-visit on any European adventure. From the romantic streets of Paris and the world-famous Eiffel Tower to the sun-drenched beaches of the French Riviera and the charming villages of Provence, France is bursting with beauty, culture, and history. Food lovers can indulge in world-class cuisine and fine wines, while art and history enthusiasts can explore iconic museums like the Louvre and historic landmarks such as Versailles. Whether you're dreaming of a relaxing countryside escape, a cultural city break, or a coastal retreat, France promises unforgettable experiences at every turn.
+    </p>
+  </section>
+  
+  <!-- Paris Section -->
+  <section class="section">
+    <h2>Paris</h2>
+    <p>
+      Paris, the enchanting capital of France, is a city that captures the hearts of visitors with its timeless beauty and world-famous landmarks. No trip to Paris is complete without a visit to the iconic Eiffel Tower, offering breathtaking views over the city skyline. Art lovers will be captivated by the Louvre Museum, home to thousands of masterpieces including the Mona Lisa. The majestic Arc de Triomphe stands proudly at the top of the Champs-Élysées, honouring those who fought for France, while the historic Notre-Dame Cathedral, with its stunning Gothic architecture, continues to inspire awe. With its rich culture, romantic atmosphere, and unforgettable sights, Paris truly lives up to its reputation as the “City of Light.”
+    </p>
+  </section>
+  
+  <!-- Strasbourg Section -->
+  <section class="section">
+    <h2>Strasbourg</h2>
+    <p>
+      Strasbourg is a captivating city in northeastern France that blends old-world charm with modern European significance. At its heart lies the magnificent Strasbourg Cathedral, a Gothic masterpiece with an intricate astronomical clock and a soaring spire that dominates the skyline. The city’s historic centre, the Grande Île, is a UNESCO World Heritage Site. Strasbourg, with its canals and medieval buildings, feels like stepping into a storybook. Strasbourg is also home to important institutions like the European Parliament, giving it a unique international flair. With its blend of culture, history, and charm, Strasbourg offers an unforgettable experience for every visitor.
+    </p>
+  </section>
+  
+  <!-- Lyon Section -->
+  <section class="section">
+    <h2>Lyon</h2>
+    <p>
+      Lyon, France’s gastronomic capital, is a vibrant city rich in history, culture, and charm. Nestled between the Rhône and Saône rivers, Lyon boasts a UNESCO World Heritage-listed Old Town, known for its Renaissance architecture and hidden passageways called traboules. The city is home to the magnificent Basilica of Notre-Dame de Fourvière, perched on a hilltop with panoramic views of Lyon below. In the heart of the city lies Place Bellecour, one of Europe’s largest open squares, while the lively Presqu’île district offers shopping, dining, and entertainment. Art lovers can explore the renowned Musée des Beaux-Arts, and food enthusiasts can indulge in traditional Lyonnaise cuisine at local bouchons. With its blend of historical treasures and modern flair, Lyon is a must-visit destination in France.
+    </p>
+  </section>
+
+  <div class="carousel">
+    <div class="carousel-images">
+      <img src="style-sheets\images\image_scrollers\france\france1.jpg" class="active">
+      <img src="style-sheets\images\image_scrollers\france\france2.jpg">
+      <img src="style-sheets\images\image_scrollers\france\france3.jpg">
+      <img src="style-sheets\images\image_scrollers\france\france4.jpg">
+      <img src="style-sheets\images\image_scrollers\france\france5.jpg">
+      <img src="style-sheets\images\image_scrollers\france\france6.jpg">
+      <img src="style-sheets\images\image_scrollers\france\france7.jpg">
+    </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+    <div class="dots"></div>
+  </div>
+  
+  <script src="scroller.js"></script>
+  
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h2>Contact Us to Book</h2>
+    <h2>Your Next Adventure</h2>
+    <a onclick="document.getElementById('popupOverlay').style.display='flex'" class="contact-button">
+      <div class="contact-img">Contact</div>
+    </a>
+  </section>
+  
+  <!-- Footer (unchanged) -->
+  <footer class="footer">
+    <p>Email: contact@terrifictravels.com.au</p>
+    <p>Phone: +61 123 456 789</p>
+    <p>Address: 68 Cecil St, South Melbourne VIC 3205</p>
+    <p>ABN: 95 656 928 483</p>
+    <p>&copy; Terrific Travels</p>
+  </footer>
+  
+  <script>
+    document.getElementById('nav-toggle').onclick = function () {
+        document.querySelector('.nav-links').classList.toggle('show');
+    };
+
+  </script>
+
+
+<div id="popupOverlay" class="ttt-overlay">
+  <div class="ttt-popup">
+    <span class="ttt-close" onclick="closePopup()">&times;</span>
+    <h1 class="ttt-title">Get in Touch</h1>
+    <form id="contactForm" class="ttt-form">
+      <input type="text" name="full_name" placeholder="Full Name" required>
+      <input type="tel" name="phone_number" placeholder="Phone Number" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      <p id="error-msg" class="ttt-error" style="display: none;">Please fill in all fields.</p>
+      <button type="submit" class="ttt-submit-btn">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- Thank You Popup -->
+<div id="thankYouPopup" class="ttt-overlay" style="display: none;">
+  <div class="ttt-popup">
+    <span class="ttt-close" onclick="closeThankYou()">&times;</span>
+    <h1 class="ttt-title">Thank You!</h1>
+    <p class="ttt-text">Your message has been received. We'll get back to you soon.</p>
+  </div>
+</div>
+
+<!-- Navigation Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector('.nav-links').classList.remove('show');
+    document.getElementById('nav-toggle').onclick = function () {
+      document.querySelector('.nav-links').classList.toggle('show');
+    };
+  });
+</script>
+
+<!-- Supabase SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- Contact Form Script -->
+<script>
+  // Initialize Supabase
+  const supabase = window.supabase.createClient(
+    'https://shrhxmfqbuggbyfoqixw.supabase.co',
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNocmh4bWZxYnVnZ2J5Zm9xaXh3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgwOTMxNjUsImV4cCI6MjA2MzY2OTE2NX0.zXXIdTTtMXCYc6p3KVko-T9tmM-a9aHGFoDNMLpL6GA'
+  );
+
+
+  // Handle form submission
+  document.getElementById('contactForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const fullName = form.full_name.value.trim();
+    const phone = form.phone_number.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
+
+    if (!fullName || !phone || !email || !message) {
+      document.getElementById('error-msg').style.display = 'block';
+      return;
+    }
+
+    try {
+      // Insert into Supabase
+      const { error } = await supabase
+        .from('contacts')
+        .insert([{ full_name: fullName, phone_number: phone, email, message }]);
+
+      if (error) {
+        console.error('Supabase insert error:', error);
+        alert('Failed to submit form: ' + error.message);
+        return;
+      }
+
+      // Send confirmation email via EmailJS
+      await emailjs.send('service_on5a8ge', 'template_zz8iznt', {
+        full_name: fullName,
+        phone_number: phone,
+        email: email,
+        message: message
+      });
+
+      // Show thank-you popup
+      document.getElementById('popupOverlay').style.display = 'none';
+      document.getElementById('thankYouPopup').style.display = 'flex';
+      form.reset();
+
+    } catch (err) {
+      console.error('Submission error:', err);
+      alert('Something went wrong. Please try again.');
+    }
+  });
+
+  function closePopup() {
+    document.getElementById('popupOverlay').style.display = 'none';
+  }
+
+  function closeThankYou() {
+    document.getElementById('thankYouPopup').style.display = 'none';
+  }
+</script>
+</body>
+</html>
