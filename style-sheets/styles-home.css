@@ -162,6 +162,9 @@
       word-wrap: break-word;
       text-align: center;
         }
+    .banner-text {
+          line-height: 0.9;
+    }
       }
 
       .banner {
