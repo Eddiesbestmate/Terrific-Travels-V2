@@ -1,4 +1,3 @@
-/* styles.css */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,8 +13,6 @@
   }
   
 
-  
-  /* Hero Section */
   .hero {
     background: url('images/eiffel.jpg') center/cover no-repeat;
     height: 100vh;
@@ -37,7 +34,6 @@
     margin-top: 10px;
   }
   
-  /* Banners */
   .banner {
     width: 100vw;
     height: 25vh;
@@ -55,7 +51,7 @@
   .spain { background-image: url('images/banners/spain.jpg'); }
   .packages { background-image: url('images/banners/packages.jpg'); }
   
-  /* Contact */
+
   .contact-section {
     padding: 60px 20px;
     text-align: center;
@@ -65,7 +61,7 @@
   
 
   
-  /* Footer */
+
   .footer {
     text-align: center;
     background: #000;
@@ -74,7 +70,7 @@
     font-family: 'Lora', serif;
   }
   
-  /* Responsive Styles */
+
   @media (max-width: 768px) {
     .hero-text h1 { font-size: 2.5rem; }
     #nav-toggle { display: block; }
@@ -92,7 +88,7 @@
     }
   }
   
-  /* Trip Intro Section */
+
 .trip-intro {
     padding: 60px 20px;
     text-align: center;
@@ -127,15 +123,15 @@
   }
 
   .contact-section h2 {
-    font-size: 4rem; /* Previously ~1rem, now 2.5x bigger */
+    font-size: 4rem; 
     margin-bottom: 10px;
     max-width: 50v;
   }
   
   .contact-img {
-    width: 50vw; /* 300px × 2.5 */
-    height: 20vh; /* 60px × 2.5 */
-    font-size: 8rem; /* 2rem × 2.5 */
+    width: 50vw;
+    height: 20vh; 
+    font-size: 8rem; 
     border-radius: 30px;
     background: url('images/contact.jpg') center/cover no-repeat;
     color: white;
