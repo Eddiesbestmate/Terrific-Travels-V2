@@ -17,13 +17,12 @@
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
         <script type="text/javascript">
           (function() {
-            emailjs.init('EH0KToJ6LwhmwxSX4'); // Replace with your EmailJS public key
+            emailjs.init('EH0KToJ6LwhmwxSX4'); 
           })();
       </script>
       </head>   
     <body>
 
-        <!-- Navigation -->
 <header class="navbar">
     <div class="logo">
       <a href="index.html">
@@ -50,39 +49,34 @@
     </nav>
     <button id="nav-toggle">☰</button>
   </header>
-  
-<!-- Hero Section -->
+
 <section class="hero-italy">
     <div class="hero-text">
       <h1>Italy</h1>
     </div>
   </section>
-  
-  <!-- italy Overview -->
+
   <section class="section">
     <h2>Italy, the beautiful boot of Europe</h2>
     <p>
         Italy is a dream destination that captivates travelers with its rich history, stunning landscapes, and world-famous cuisine. From the romantic canals of Venice and the ancient ruins of Rome to the rolling hills of Tuscany and the stunning Amalfi Coast, Italy offers a perfect mix of culture, beauty, and adventure. Visitors can explore iconic landmarks like the Colosseum, the Leaning Tower of Pisa, and the Vatican, or relax with a glass of wine in a charming piazza. Whether you’re a history buff, a foodie, an art lover, or simply looking to unwind, Italy promises unforgettable experiences and timeless charm at every turn.
     </p>
   </section>
-  
-  <!-- Paris Section -->
+
   <section class="section">
     <h2>Rome</h2>
     <p>
         Rome, the Eternal City, is a captivating destination where ancient history and vibrant modern life come together. Visitors can walk in the footsteps of emperors at the iconic Colosseum, marvel at the grandeur of the Roman Forum, and toss a coin into the stunning Trevi Fountain to ensure their return. The Vatican City, home to St. Peter’s Basilica and the awe-inspiring Sistine Chapel, showcases the city’s deep religious and artistic heritage. Don’t miss the majestic Pantheon or the lively atmosphere of Piazza Navona, filled with street artists, fountains, and cafés. With its rich blend of history, architecture, and Italian charm, Rome offers an unforgettable experience.
     </p>
   </section>
-  
-  <!-- Strasbourg Section -->
+
   <section class="section">
     <h2>Venice</h2>
     <p>
         Venice is one of the world’s most enchanting cities, known for its romantic canals, historic architecture, and timeless beauty. Built on a network of islands connected by bridges and waterways, Venice offers a truly unique experience. A gondola ride along the Grand Canal provides stunning views of elegant palaces and centuries-old buildings. At the heart of the city lies the magnificent St. Mark’s Square, home to the striking St. Mark’s Basilica and the iconic Campanile. Nearby, the ornate Doge’s Palace reflects the city’s rich political history, while the famous Rialto Bridge offers spectacular views and vibrant shopping. With its magical atmosphere and cultural treasures, Venice is a must-visit destination.
     </p>
   </section>
-  
-  <!-- Lyon Section -->
+        
   <section class="section">
     <h2>Naples</h2>
     <p>
@@ -90,7 +84,6 @@
     </p>
   </section>
 
-  <!-- Image Scroller Section -->
   <div class="carousel">
     <div class="carousel-images">
       <img src="style-sheets/images\image_scrollers\italy\italy1.jpg" class="active">
@@ -107,8 +100,7 @@
   </div>
   
   <script src="scroller.js"></script>
-  
-  <!-- Contact Section -->
+
   <section class="contact-section">
     <h2>Contact Us to Book</h2>
     <h2>Your Next Adventure</h2>
@@ -116,8 +108,7 @@
       <div class="contact-img">Contact</div>
     </a>
   </section>
-  
-  <!-- Footer (unchanged) -->
+
   <footer class="footer">
     <p>Email: contact@terrifictravels.au</p>
     <p>Phone: +61 123 456 789</p>
@@ -149,7 +140,6 @@
   </div>
 </div>
 
-<!-- Thank You Popup -->
 <div id="thankYouPopup" class="ttt-overlay" style="display: none;">
   <div class="ttt-popup">
     <span class="ttt-close" onclick="closeThankYou()">&times;</span>
@@ -158,7 +148,6 @@
   </div>
 </div>
 
-<!-- Navigation Script -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     document.querySelector('.nav-links').classList.remove('show');
@@ -168,19 +157,15 @@
   });
 </script>
 
-<!-- Supabase SDK -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-<!-- Contact Form Script -->
 <script>
-  // Initialize Supabase
   const supabase = window.supabase.createClient(
     'https://shrhxmfqbuggbyfoqixw.supabase.co',
     'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNocmh4bWZxYnVnZ2J5Zm9xaXh3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgwOTMxNjUsImV4cCI6MjA2MzY2OTE2NX0.zXXIdTTtMXCYc6p3KVko-T9tmM-a9aHGFoDNMLpL6GA'
   );
 
 
-  // Handle form submission
   document.getElementById('contactForm').addEventListener('submit', async function (e) {
     e.preventDefault();
 
@@ -196,7 +181,6 @@
     }
 
     try {
-      // Insert into Supabase
       const { error } = await supabase
         .from('contacts')
         .insert([{ full_name: fullName, phone_number: phone, email, message }]);
@@ -207,7 +191,6 @@
         return;
       }
 
-      // Send confirmation email via EmailJS
       await emailjs.send('service_on5a8ge', 'template_zz8iznt', {
         full_name: fullName,
         phone_number: phone,
@@ -215,7 +198,6 @@
         message: message
       });
 
-      // Show thank-you popup
       document.getElementById('popupOverlay').style.display = 'none';
       document.getElementById('thankYouPopup').style.display = 'flex';
       form.reset();
