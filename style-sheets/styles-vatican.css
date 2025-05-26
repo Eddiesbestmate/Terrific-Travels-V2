@@ -49,11 +49,10 @@ body {
   }
   
   .contact-section h2 {
-    font-size: 4rem; /* Previously ~1rem, now 2.5x bigger */
+    font-size: 4rem; 
     margin-bottom: 10px;
   }
   
-  /* Footer */
   .footer {
     text-align: center;
     background: #000;
