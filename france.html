@@ -17,13 +17,12 @@
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
         <script type="text/javascript">
           (function() {
-            emailjs.init('EH0KToJ6LwhmwxSX4'); // Replace with your EmailJS public key
+            emailjs.init('EH0KToJ6LwhmwxSX4');
           })();
       </script>
       </head>   
     <body>
 
-        <!-- Navigation -->
 <header class="navbar">
     <div class="logo">
       <a href="index.html">
@@ -50,39 +49,34 @@
     </nav>
     <button id="nav-toggle">☰</button>
   </header>
-  
-<!-- Hero Section -->
+
 <section class="hero-france">
     <div class="hero-text">
       <h1>France</h1>
     </div>
   </section>
-  
-  <!-- France Overview -->
+
   <section class="section">
     <h2>France, the country of Love</h2>
     <p>
       France is a timeless destination that offers something for every traveler, making it a must-visit on any European adventure. From the romantic streets of Paris and the world-famous Eiffel Tower to the sun-drenched beaches of the French Riviera and the charming villages of Provence, France is bursting with beauty, culture, and history. Food lovers can indulge in world-class cuisine and fine wines, while art and history enthusiasts can explore iconic museums like the Louvre and historic landmarks such as Versailles. Whether you're dreaming of a relaxing countryside escape, a cultural city break, or a coastal retreat, France promises unforgettable experiences at every turn.
     </p>
   </section>
-  
-  <!-- Paris Section -->
+
   <section class="section">
     <h2>Paris</h2>
     <p>
       Paris, the enchanting capital of France, is a city that captures the hearts of visitors with its timeless beauty and world-famous landmarks. No trip to Paris is complete without a visit to the iconic Eiffel Tower, offering breathtaking views over the city skyline. Art lovers will be captivated by the Louvre Museum, home to thousands of masterpieces including the Mona Lisa. The majestic Arc de Triomphe stands proudly at the top of the Champs-Élysées, honouring those who fought for France, while the historic Notre-Dame Cathedral, with its stunning Gothic architecture, continues to inspire awe. With its rich culture, romantic atmosphere, and unforgettable sights, Paris truly lives up to its reputation as the “City of Light.”
     </p>
   </section>
-  
-  <!-- Strasbourg Section -->
+
   <section class="section">
     <h2>Strasbourg</h2>
     <p>
       Strasbourg is a captivating city in northeastern France that blends old-world charm with modern European significance. At its heart lies the magnificent Strasbourg Cathedral, a Gothic masterpiece with an intricate astronomical clock and a soaring spire that dominates the skyline. The city’s historic centre, the Grande Île, is a UNESCO World Heritage Site. Strasbourg, with its canals and medieval buildings, feels like stepping into a storybook. Strasbourg is also home to important institutions like the European Parliament, giving it a unique international flair. With its blend of culture, history, and charm, Strasbourg offers an unforgettable experience for every visitor.
     </p>
   </section>
-  
-  <!-- Lyon Section -->
+
   <section class="section">
     <h2>Lyon</h2>
     <p>
@@ -106,8 +100,7 @@
   </div>
   
   <script src="scroller.js"></script>
-  
-  <!-- Contact Section -->
+
   <section class="contact-section">
     <h2>Contact Us to Book</h2>
     <h2>Your Next Adventure</h2>
@@ -115,8 +108,7 @@
       <div class="contact-img">Contact</div>
     </a>
   </section>
-  
-  <!-- Footer (unchanged) -->
+
   <footer class="footer">
     <p>Email: contact@terrifictravels.au</p>
     <p>Phone: +61 123 456 789</p>
@@ -148,7 +140,6 @@
   </div>
 </div>
 
-<!-- Thank You Popup -->
 <div id="thankYouPopup" class="ttt-overlay" style="display: none;">
   <div class="ttt-popup">
     <span class="ttt-close" onclick="closeThankYou()">&times;</span>
@@ -157,7 +148,6 @@
   </div>
 </div>
 
-<!-- Navigation Script -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     document.querySelector('.nav-links').classList.remove('show');
@@ -167,19 +157,15 @@
   });
 </script>
 
-<!-- Supabase SDK -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-<!-- Contact Form Script -->
 <script>
   // Initialize Supabase
   const supabase = window.supabase.createClient(
     'https://shrhxmfqbuggbyfoqixw.supabase.co',
     'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNocmh4bWZxYnVnZ2J5Zm9xaXh3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgwOTMxNjUsImV4cCI6MjA2MzY2OTE2NX0.zXXIdTTtMXCYc6p3KVko-T9tmM-a9aHGFoDNMLpL6GA'
   );
-
-
-  // Handle form submission
+    
   document.getElementById('contactForm').addEventListener('submit', async function (e) {
     e.preventDefault();
 
@@ -195,7 +181,6 @@
     }
 
     try {
-      // Insert into Supabase
       const { error } = await supabase
         .from('contacts')
         .insert([{ full_name: fullName, phone_number: phone, email, message }]);
@@ -206,7 +191,6 @@
         return;
       }
 
-      // Send confirmation email via EmailJS
       await emailjs.send('service_on5a8ge', 'template_zz8iznt', {
         full_name: fullName,
         phone_number: phone,
@@ -214,7 +198,6 @@
         message: message
       });
 
-      // Show thank-you popup
       document.getElementById('popupOverlay').style.display = 'none';
       document.getElementById('thankYouPopup').style.display = 'flex';
       form.reset();
