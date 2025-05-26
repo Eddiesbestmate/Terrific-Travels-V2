@@ -5,7 +5,6 @@ const nextBtn = document.querySelector('.next');
 let current = 0;
 let interval = setInterval(nextImage, 5000);
 
-// Create dots
 images.forEach((_, index) => {
   const dot = document.createElement('span');
   dot.classList.add('dot');
