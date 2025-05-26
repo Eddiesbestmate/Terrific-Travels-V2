@@ -21,7 +21,6 @@
 </script>
 </head>
 <body>
-  <!-- Fixed Navigation Bar -->
   <header class="navbar">
     <div class="logo">
       <a href="index.html">
@@ -49,7 +48,6 @@
     <button id="nav-toggle">☰</button>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-text">
       <h1>Terrific Travels</h1>
@@ -57,7 +55,6 @@
     </div>
   </section>
 
-  <!-- Trip Intro Section -->
   <section class="trip-intro">
     <h2>Creating Your Once in a Lifetime Trip</h2>
     <p>
@@ -74,7 +71,6 @@
     <h2>Our Locations:</h2>
   </section>
 
-  <!-- Full-Width Image Banners with Links -->
   <a href="uk.html">
     <section class="banner uk">
       <h3 class="banner-text">United Kingdom</h3>
@@ -111,7 +107,6 @@
     </section>
   </a>
 
-  <!-- Contact Section -->
   <section id="contact" class="contact-section">
     <h2>Contact Us to Book</h2>
     <h2>Your Next Adventure</h2>
@@ -120,7 +115,6 @@
     </a>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <p>Email: contact@terrifictravels.au</p>
     <p>Phone: +61 123 456 789</p>
@@ -129,7 +123,6 @@
     <p>&copy; Terrific Travels</p>
   </footer>
 
-  <!-- Contact Popup -->
   <div id="popupOverlay" class="ttt-overlay">
     <div class="ttt-popup">
       <span class="ttt-close" onclick="closePopup()">&times;</span>
@@ -145,7 +138,6 @@
     </div>
   </div>
 
-  <!-- Thank You Popup -->
   <div id="thankYouPopup" class="ttt-overlay" style="display: none;">
     <div class="ttt-popup">
       <span class="ttt-close" onclick="closeThankYou()">&times;</span>
@@ -154,7 +146,6 @@
     </div>
   </div>
 
-  <!-- Navigation Script -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       document.querySelector('.nav-links').classList.remove('show');
@@ -164,10 +155,8 @@
     });
   </script>
 
-  <!-- Supabase SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-  <!-- Contact Form Script -->
   <script>
     // Initialize Supabase
     const supabase = window.supabase.createClient(
@@ -175,8 +164,6 @@
       'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNocmh4bWZxYnVnZ2J5Zm9xaXh3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgwOTMxNjUsImV4cCI6MjA2MzY2OTE2NX0.zXXIdTTtMXCYc6p3KVko-T9tmM-a9aHGFoDNMLpL6GA'
     );
   
-  
-    // Handle form submission
     document.getElementById('contactForm').addEventListener('submit', async function (e) {
       e.preventDefault();
   
@@ -202,16 +189,14 @@
           alert('Failed to submit form: ' + error.message);
           return;
         }
-  
-        // Send confirmation email via EmailJS
+
         await emailjs.send('service_on5a8ge', 'template_zz8iznt', {
           full_name: fullName,
           phone_number: phone,
           email: email,
           message: message
         });
-  
-        // Show thank-you popup
+
         document.getElementById('popupOverlay').style.display = 'none';
         document.getElementById('thankYouPopup').style.display = 'flex';
         form.reset();
