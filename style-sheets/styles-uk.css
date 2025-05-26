@@ -4,9 +4,7 @@ body {
     background-color: #fff;
     color: #333;
   }
-  /* Navbar */
-  /* Navbar */
-  
+
   .hero-uk {
     background: url('images/uk-hero.jpg') center/cover no-repeat;
     height: 100vh;
@@ -51,10 +49,6 @@ body {
   }
   
 
-
-
-
-  /* Footer */
   .footer {
     text-align: center;
     background: #000;
