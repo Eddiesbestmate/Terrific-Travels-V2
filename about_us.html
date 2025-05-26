@@ -21,7 +21,6 @@
 </script>
 </head>
 <body>
-  <!-- Navigation -->
   <header class="navbar">
     <div class="logo">
       <a href="index.html">
@@ -49,14 +48,12 @@
     <button id="nav-toggle">☰</button>
   </header>
 
-  <!-- Hero Section -->
   <section class="about-hero">
     <div class="hero-text">
       <h1>About Us</h1>
     </div>
   </section>
 
-  <!-- Intro -->
   <section class="about-section">
     <p>
       Established in 1997, Terrific Travels has been helping customers explore the world for over two decades. What began as a small, passionate team with a love for travel has grown into a trusted and well-respected name in the travel industry. Over the years, we’ve built strong relationships with airlines, hotels, and tour operators across the globe, allowing us to offer exceptional value and tailor-made experiences to suit every kind of traveler.
@@ -66,7 +63,6 @@
     </p>
   </section>
 
-  <!-- Why Europe -->
   <section class="about-section">
     <h2>Why Europe?</h2>
     <p>
@@ -77,7 +73,6 @@
     </p>
   </section>
 
-  <!-- We Put You First -->
   <section class="about-section">
     <h2>We put you first</h2>
     <p>
@@ -88,7 +83,6 @@
     </p>
   </section>
 
-  <!-- Reviews -->
   <section class="reviews-section">
     <h2>Customer Reviews</h2>
     <div class="review">★★★★★  Martin V., Ferntree Gully<br>
@@ -108,7 +102,6 @@
     </div>
   </section>
 
-  <!-- Contact -->
   <section id="contact" class="contact-section">
     <h2>Contact Us to Book</h2>
     <h2>Your Next Adventure</h2>
@@ -117,7 +110,6 @@
     </a>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <p>Email: contact@terrifictravels.au</p>
     <p>Phone: +61 123 456 789</p>
@@ -147,7 +139,6 @@
   </div>
 </div>
 
-<!-- Thank You Popup -->
 <div id="thankYouPopup" class="ttt-overlay" style="display: none;">
   <div class="ttt-popup">
     <span class="ttt-close" onclick="closeThankYou()">&times;</span>
@@ -156,7 +147,6 @@
   </div>
 </div>
 
-<!-- Navigation Script -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     document.querySelector('.nav-links').classList.remove('show');
@@ -166,19 +156,15 @@
   });
 </script>
 
-<!-- Supabase SDK -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-<!-- Contact Form Script -->
 <script>
-  // Initialize Supabase
   const supabase = window.supabase.createClient(
     'https://shrhxmfqbuggbyfoqixw.supabase.co',
     'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNocmh4bWZxYnVnZ2J5Zm9xaXh3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgwOTMxNjUsImV4cCI6MjA2MzY2OTE2NX0.zXXIdTTtMXCYc6p3KVko-T9tmM-a9aHGFoDNMLpL6GA'
   );
 
 
-  // Handle form submission
   document.getElementById('contactForm').addEventListener('submit', async function (e) {
     e.preventDefault();
 
@@ -194,7 +180,6 @@
     }
 
     try {
-      // Insert into Supabase
       const { error } = await supabase
         .from('contacts')
         .insert([{ full_name: fullName, phone_number: phone, email, message }]);
@@ -205,7 +190,6 @@
         return;
       }
 
-      // Send confirmation email via EmailJS
       await emailjs.send('service_on5a8ge', 'template_zz8iznt', {
         full_name: fullName,
         phone_number: phone,
@@ -213,7 +197,6 @@
         message: message
       });
 
-      // Show thank-you popup
       document.getElementById('popupOverlay').style.display = 'none';
       document.getElementById('thankYouPopup').style.display = 'flex';
       form.reset();
