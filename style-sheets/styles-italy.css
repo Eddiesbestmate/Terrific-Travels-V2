@@ -4,8 +4,7 @@ body {
     background-color: #fff;
     color: #333;
   }
-  /* Navbar */
-  /* Navbar */
+
   .navbar {
     position: fixed;
     top: 0;
@@ -114,7 +113,6 @@ body {
   }
   
 
-  /* Footer */
   .footer {
     text-align: center;
     background: #000;
