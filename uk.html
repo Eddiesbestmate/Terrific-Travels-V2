@@ -17,13 +17,12 @@
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
         <script type="text/javascript">
           (function() {
-            emailjs.init('EH0KToJ6LwhmwxSX4'); // Replace with your EmailJS public key
+            emailjs.init('EH0KToJ6LwhmwxSX4'); 
           })();
       </script>        
       </head>   
     <body>
 
-        <!-- Navigation -->
         <header class="navbar">
           <div class="logo">
             <a href="index.html">
@@ -52,39 +51,34 @@
         </header>
       
 
-  
-<!-- Hero Section -->
+
 <section class="hero-uk">
     <div class="hero-text">
       <h1>United Kingom</h1>
     </div>
   </section>
-  
-  <!-- uk Overview -->
+
   <section class="section">
     <h2>Why go to the UK?</h2>
     <p>
         Step into the heart of the United Kingdom, where centuries of rich history blend seamlessly with the thrill of modern discovery. Wander through charming villages that whisper stories of old, explore iconic landmarks that stand as testaments to a proud heritage, and embrace the energy of dynamic cities that never sleep. Whether you're strolling along the peaceful shores of Scotland's lochs, exploring the bustling streets of London, or marveling at the breathtaking beauty of the Welsh mountains, every moment is an invitation to discover something new. With a mix of tradition, culture, and adventure around every corner, the UK promises a journey like no other, where every path leads to unforgettable memories.
     </p>
   </section>
-  
-  <!-- Paris Section -->
+
   <section class="section">
     <h2>London</h2>
     <p>
         London, a city steeped in history and brimming with modern excitement, is a must-visit for any traveler. Begin your adventure by crossing the iconic Tower Bridge, an engineering marvel that offers stunning views of the River Thames and the city's skyline. Dive into history at Westminster Abbey, where centuries of British monarchs have been crowned and laid to rest. Just a stone's throw away, marvel at the grandeur of Big Ben, the symbol of London’s timeless elegance, and take in the vibrant energy of the nearby Houses of Parliament. No trip to London is complete without a visit to Buckingham Palace, where the Changing of the Guard ceremony offers a glimpse into the traditions of the British monarchy. From historic landmarks to charming streets, London effortlessly blends the old with the new, offering an unforgettable experience at every turn.
     </p>
   </section>
-  
-  <!-- Strasbourg Section -->
+
   <section class="section">
     <h2>Edinburgh</h2>
     <p>
         Edinburgh, Scotland’s enchanting capital, is a city steeped in history and rich in culture. At its heart lies the iconic Royal Mile, a historic cobbled street that stretches from the imposing Edinburgh Castle, standing proudly atop Castle Rock, to the elegant Palace of Holyroodhouse, the official Scottish residence of the British monarch. Along the way, visitors can explore centuries-old buildings, charming shops, traditional pubs, and hidden closes that reveal the city's storied past. Whether you're captivated by royal heritage or simply want to soak in the atmosphere of one of Europe’s most beautiful cities, Edinburgh promises an unforgettable experience.
     </p>
   </section>
-  
-  <!-- Lyon Section -->
+
   <section class="section">
     <h2>Manchester</h2>
     <p>
@@ -92,7 +86,6 @@
     </p>
   </section>
 
-  <!-- Image Scroller Section -->
   <div class="carousel">
     <div class="carousel-images">
       <img src="style-sheets/images\image_scrollers\United_Kingdom\uk1.png" alt="Big Ben" class="active">
@@ -112,8 +105,7 @@
   </div>
   
   <script src="scroller.js"></script>
-  
-  <!-- Contact Section -->
+
   <section class="contact-section">
     <h2>Contact Us to Book</h2>
     <h2>Your Next Adventure</h2>
@@ -121,8 +113,7 @@
       <div class="contact-img">Contact</div>
     </a>
   </section>
-  
-  <!-- Footer (unchanged) -->
+
   <footer class="footer">
     <p>Email: contact@terrifictravels.au</p>
     <p>Phone: +61 123 456 789</p>
@@ -155,7 +146,6 @@
   </div>
 </div>
 
-<!-- Thank You Popup -->
 <div id="thankYouPopup" class="ttt-overlay" style="display: none;">
   <div class="ttt-popup">
     <span class="ttt-close" onclick="closeThankYou()">&times;</span>
@@ -164,7 +154,6 @@
   </div>
 </div>
 
-<!-- Navigation Script -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     document.querySelector('.nav-links').classList.remove('show');
@@ -174,19 +163,15 @@
   });
 </script>
 
-<!-- Supabase SDK -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-<!-- Contact Form Script -->
 <script>
-  // Initialize Supabase
   const supabase = window.supabase.createClient(
     'https://shrhxmfqbuggbyfoqixw.supabase.co',
     'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNocmh4bWZxYnVnZ2J5Zm9xaXh3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgwOTMxNjUsImV4cCI6MjA2MzY2OTE2NX0.zXXIdTTtMXCYc6p3KVko-T9tmM-a9aHGFoDNMLpL6GA'
   );
 
 
-  // Handle form submission
   document.getElementById('contactForm').addEventListener('submit', async function (e) {
     e.preventDefault();
 
@@ -202,7 +187,6 @@
     }
 
     try {
-      // Insert into Supabase
       const { error } = await supabase
         .from('contacts')
         .insert([{ full_name: fullName, phone_number: phone, email, message }]);
@@ -213,7 +197,6 @@
         return;
       }
 
-      // Send confirmation email via EmailJS
       await emailjs.send('service_on5a8ge', 'template_zz8iznt', {
         full_name: fullName,
         phone_number: phone,
@@ -221,7 +204,6 @@
         message: message
       });
 
-      // Show thank-you popup
       document.getElementById('popupOverlay').style.display = 'none';
       document.getElementById('thankYouPopup').style.display = 'flex';
       form.reset();
